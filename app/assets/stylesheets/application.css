@@ -25,10 +25,12 @@
    padding: 0;
    width: 100vw;
    height: 100vh;
+
  }
 
  model-viewer {
-   width: 100%;
+   margin: 0 auto;
+   width: 70%;
    height: 90%;
    background-color: #ffffff;
  }
@@ -111,7 +113,7 @@
    left: 50%;
    bottom: 60px;
    animation: elongate 2s infinite ease-in-out alternate;
-   display: none;
+   /*display: none;*/
  }
 
  model-viewer[ar-status="session-started"] > #ar-prompt {
