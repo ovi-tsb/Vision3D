@@ -27,6 +27,11 @@
 	      
 	  </div>
 	</model-viewer> 
+	<model-viewer id="shoe" camera-controls touch-action="pan-y" src="../../shared-assets/models/glTF-Sample-Assets/Models/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb" tone-mapping="commerce" ar alt="A 3D model of a Shoe">
+	  <div class="controls">
+	    <div>Variant: <select id="variant"></select></div>
+	  </div>
+	</model-viewer>
 	<script>
 	const modelViewerVariants = document.querySelector("model-viewer#shoe");
 	const select = document.querySelector('#variant');
