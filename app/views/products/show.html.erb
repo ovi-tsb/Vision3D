@@ -14,7 +14,7 @@
 <% if @product.featured_image.attached? %>
 
 	<!-- <model-viewer> HTML element -->
-	<model-viewer bounds="tight" src="<%= url_for(@product.featured_image ) %>" ar ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="2.2" exposure="1.51" shadow-softness="1">
+	<!-- <model-viewer bounds="tight" src="<%#= url_for(@product.featured_image ) %>" ar ar-modes="scene-viewer webxr quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="2.2" exposure="1.51" shadow-softness="1">
 	  <div class="progress-bar hide" slot="progress-bar">
 	      <div class="update-bar"></div>
 	  </div>
@@ -22,15 +22,15 @@
 	      View in your space
 	  </button>
 	  <div id="ar-prompt">
-	      <!-- <img src="ar_hand_prompt.png"> -->
+	     
 	      <img src='https://s3.us-east-2.amazonaws.com/tester-parts-room/ar_hand_prompt.png'>
 	      
 	  </div>
-	</model-viewer> 
+	</model-viewer> -->
+
+
 	<model-viewer id="shoe" camera-controls touch-action="pan-y" src="<%= url_for(@product.featured_image ) %>" tone-mapping="commerce" ar alt="A 3D model of a Shoe">
-	  <div class="controls">
-	    <div>Variant: <select id="variant"></select></div>
-	  </div>
+	  
 	</model-viewer>
 	<script>
 	const modelViewerVariants = document.querySelector("model-viewer#shoe");
