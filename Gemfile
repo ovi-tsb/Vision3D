@@ -28,6 +28,7 @@ gem "bootsnap", require: false
 ###################
 gem "image_processing"
 gem "rack-cors"
+gem 'aws-sdk-s3'
 ##################
 
 group :development, :test do
