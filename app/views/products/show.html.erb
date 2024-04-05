@@ -26,13 +26,17 @@
 	      <img src='https://s3.us-east-2.amazonaws.com/tester-parts-room/ar_hand_prompt.png'>
 	      
 	  </div>
+
 	</model-viewer> -->
 
+	<p>IMAGE</p>
+	
 
+	
 	<model-viewer id="shoe" camera-controls touch-action="pan-y" src="<%= url_for(@product.featured_image) %>" tone-mapping="commerce" ar alt="A 3D model">
 	  
-	</model-viewer>
-	<script>
+	</model-viewer> 
+	<!-- <script>
 	const modelViewerVariants = document.querySelector("model-viewer#shoe");
 	const select = document.querySelector('#variant');
 
@@ -54,7 +58,7 @@
 	select.addEventListener('input', (event) => {
 	  modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
 	});
-	</script>
+	</script> -->
 	
    <%#= image_tag @product.featured_image, style: "width: 350px; display: block;", class: "img-responsive" %>
   
