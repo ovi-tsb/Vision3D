@@ -11,14 +11,20 @@
 
   
   <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><b><%= product.title %></b></td>
-        <td> - </td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <% if @products.any? %>
+    
+    
+      <% @products.each do |product| %>
+        <tr>
+          <td><b><%= product.title %></b></td>
+          <td> - </td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <p>No product yet</p>
     <% end %>
   </tbody>
 </table>
